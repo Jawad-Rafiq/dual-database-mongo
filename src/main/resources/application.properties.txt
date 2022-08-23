@@ -1,0 +1,43 @@
+#For Multi Database Testing - 30 June 2022
+spring.autoconfigure.exclude= org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration
+#spring.data.mongodb.newdb1.uri=mongodb+srv://admin:root@testmongodb.ritkwh8.mongodb.net/Check-one
+#spring.data.mongodb.newdb2.uri=mongodb+srv://admin:root@testmongodb.ritkwh8.mongodb.net/Check-two
+
+spring.data.mongodb.newdb1.uri=mongodb+srv://admin:abc456@sp-mongo-tst.9srbc.mongodb.net/user_identity_test_sp
+spring.data.mongodb.newdb2.uri=mongodb+srv://admin:abc456@sp-mongo-tst.9srbc.mongodb.net/user_identity_test_sp_password
+
+
+#mongodb.primary.database=user_identity_test_sp
+#mongodb.secondary.database=user_identity_test_sp_password
+#spring.data.mongodb.newdb1.uri="mongodb://admin:abc456@sp-mongo-tst-shard-00-00.9srbc.mongodb.net:27017,sp-mongo-tst-shard-00-01.9srbc.mongodb.net:27017,sp-mongo-tst-shard-00-02.9srbc.mongodb.net:27017/?ssl=true&replicaSet=atlas-2np5fb-shard-0&authSource=admin&retryWrites=true&w=majority/user_identity_test_sp"
+#spring.data.mongodb.newdb2.uri="mongodb://admin:abc456@sp-mongo-tst-shard-00-00.9srbc.mongodb.net:27017,sp-mongo-tst-shard-00-01.9srbc.mongodb.net:27017,sp-mongo-tst-shard-00-02.9srbc.mongodb.net:27017/?ssl=true&replicaSet=atlas-2np5fb-shard-0&authSource=admin&retryWrites=true&w=majority/user_identity_test_sp_password"
+
+#"mongodb://admin:abc456@sp-mongo-tst-shard-00-00.9srbc.mongodb.net:27017,sp-mongo-tst-shard-00-01.9srbc.mongodb.net:27017,sp-mongo-tst-shard-00-02.9srbc.mongodb.net:27017/?ssl=true&replicaSet=atlas-2np5fb-shard-0&authSource=admin&retryWrites=true&w=majority"
+
+
+#spring.data.mongodb.uri=mongodb+srv://admin:root@testmongodb.ritkwh8.mongodb.net/?retryWrites=true&w=majority
+#spring.data.mongodb.database=TestMongoDB
+
+#spring.data.mongodb.uri=mongodb://admin:abc456@34.254.185.147:27017/
+#spring.data.mongodb.database=user_identity_test_sp
+
+#--- Primary MongoDB ---#
+#spring.data.mongodb.uri=mongodb://admin:abc456@34.254.185.147:27017/user_identity_test_sp
+#--- Secondary MongoDB ---#
+#mongodb.uri=mongodb://admin:abc456@34.254.185.147:27017/user_identity_test_sp_password
+
+#mongodb.secondary.database=user_identity_test_sp_password
+#mongodb.secondary.host=34.254.185.147
+#mongodb.secondary.port=27017
+#mongodb.secondary.username=admin
+#mongodb.secondary.password=abc456
+#mongodb.secondary.authentication-database=admin
+
+#mongodb.primary.database=user_identity_test_sp
+#mongodb.primary.host=34.254.185.147
+#mongodb.primary.port=27017
+#mongodb.primary.username=admin
+#mongodb.primary.password=abc456
+#mongodb.primary.authentication-database=admin
+#mongobee.enabled=true
+#mongodb.uri=mongodb://${mongodb.primary.username}:${mongodb.primary.password}@${mongodb.primary.host}:${mongodb.primary.port}/${mongodb.primary.database}?authSource=${mongodb.primary.authentication-database}
